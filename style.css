@@ -1,0 +1,318 @@
+:root {
+  --primary-blue: #0a2540;
+  --accent-blue: #007aff;
+  --white: #ffffff;
+  --text-light: #e6ebf1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-blue);
+  background-color: #fcfcfc;
+}
+
+/* Full Background Hero */
+.hero {
+  position: relative;
+  height: 68vh;              /* lavere så steps kan ses */
+  min-height: 520px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('Forside.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white);
+  text-align: center;
+}
+
+/* Mørkt lag over billedet for læsbarhed */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 37, 64, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 34px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-main {
+  background: var(--accent-blue);
+  color: white;
+  padding: 20px 45px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  transition: transform 0.2s, background 0.2s;
+  display: inline-block;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+  background: #0062cc;
+}
+
+/* Secondary button (bruges i hero) */
+.btn-secondary {
+  display: inline-block;
+  padding: 16px 28px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.35);
+  text-decoration: none;
+  font-weight: 800;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.03);
+}
+
+.hero-secondary {
+  border-color: rgba(255,255,255,0.35);
+}
+
+/* App Badges - Skjult som standard */
+.app-badges {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.app-badges.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.app-badges img {
+  height: 50px;
+  transition: transform 0.2s;
+}
+
+.app-badges img:hover {
+  transform: scale(1.1);
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+  padding: 90px 5%;
+  background: #eef4ff;
+  border-top: 1px solid #dbe7ff;
+  border-bottom: 1px solid #dbe7ff;
+}
+
+.how-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.2rem;
+  margin: 0 0 12px;
+  letter-spacing: -1px;
+  color: var(--primary-blue);
+}
+
+.how-sub {
+  margin: 0 auto 40px;
+  max-width: 760px;
+  color: #35506a;
+  font-size: 1.05rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.step-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #cfe0ff;
+  border-radius: 14px;
+  padding: 24px 18px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(10, 37, 64, 0.08);
+}
+
+.step-icon {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 122, 255, 0.12); /* mere blå */
+  color: var(--accent-blue);           /* ikon farve */
+}
+
+/* FIX: gør lucide svg pæne og ens + blå */
+.step-icon svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+  stroke-width: 2.2;
+  stroke: var(--accent-blue);
+}
+
+.step-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--primary-blue);
+}
+
+.step-card p {
+  margin: 0;
+  color: #35506a;
+  line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+/* Pile mellem bokse (desktop) */
+.step-card::after {
+  content: "→";
+  position: absolute;
+  right: -21px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(5, 5, 5, 0.35);
+}
+
+.step-card:last-child::after {
+  content: "";
+}
+
+/* CTA under flow */
+.how-cta {
+  margin-top: 34px;
+}
+
+/* Gør "Se services" blå som "Download appen" */
+.how-cta .btn-secondary {
+  background: var(--accent-blue);
+  color: #fff;
+  border: none;
+  padding: 18px 40px;
+  font-size: 1.1rem;
+  box-shadow: 0 10px 25px rgba(0,122,255,0.25);
+}
+
+.how-cta .btn-secondary:hover {
+  background: #0062cc;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #f8fafc;
+  padding: 80px 5% 40px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-column h4 {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-column a {
+  display: block;
+  text-decoration: none;
+  color: #64748b;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .step-card::after {
+    content: "";
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    height: 78vh;
+    min-height: 520px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+

@@ -1,0 +1,107 @@
+/* kontakt.css (renset – ingen navbar override) */
+:root{
+  --primary-blue:#0a2540;
+  --accent-blue:#007aff;
+  --bg:#eef4ff;
+  --muted:#35506a;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:var(--primary-blue);
+  background:var(--bg);
+}
+
+/* HERO */
+.contact-hero{
+  padding:90px 5% 40px;
+  background:
+    radial-gradient(900px 420px at 18% 20%, rgba(0,122,255,.16), transparent 60%),
+    radial-gradient(700px 380px at 85% 30%, rgba(10,37,64,.10), transparent 55%),
+    var(--bg);
+  border-bottom:1px solid rgba(0,122,255,.18);
+}
+
+.contact-hero-inner{
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.contact-hero h1{
+  margin:0;
+  font-size:3rem;
+  font-weight:800;
+  letter-spacing:-2px;
+  color:var(--primary-blue);
+}
+
+/* CONTENT */
+.contact-content{
+  padding:40px 5% 90px;
+  background:var(--bg);
+}
+
+.contact-legal{
+  max-width:720px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.contact-legal h2{
+  margin:34px 0 12px;
+  font-size:.95rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--primary-blue);
+}
+
+/* BLOCKS */
+.contact-block{
+  background:rgba(255,255,255,0.88);
+  border:1px solid rgba(0,122,255,0.18);
+  border-radius:16px;
+  padding:18px 18px;
+  box-shadow:0 12px 28px rgba(10,37,64,0.06);
+}
+
+.contact-block p{
+  margin:6px 0;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.contact-block a{
+  color:var(--accent-blue);
+  font-weight:800;
+  text-decoration:none;
+}
+
+.contact-block a:hover{
+  text-decoration:underline;
+}
+
+.spacer{
+  margin:14px 0 !important;
+}
+
+/* FOOTER (kun hvis du IKKE allerede har footer-css i style.css) */
+footer{
+  background:#fff;
+  border-top:1px solid rgba(10,37,64,0.08);
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:26px 5%;
+  color:#7b91a8;
+  font-size:.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width:560px){
+  .contact-hero h1{ font-size:2.6rem; }
+}
