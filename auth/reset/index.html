@@ -7,11 +7,9 @@
   </head>
   <body>
     <p>Åbner appen…</p>
-
     <script>
       const qs = window.location.search || "";
       const hash = window.location.hash || "";
-
       const deepLink = "harborhub://auth/reset" + qs + hash;
       window.location.replace(deepLink);
 
