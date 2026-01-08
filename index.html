@@ -6,7 +6,7 @@
   <title>HarborHub - Din maritime partner</title>
 
   <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="global.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -146,6 +146,45 @@
         badges.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
+  </script>
+
+  <!-- AUTH BRIDGE (til Supabase email links) -->
+  <script>
+    (function () {
+      const path = (window.location.pathname || "").toLowerCase();
+
+      // Kør kun på /auth/callback og /auth/reset
+      if (!(path.startsWith("/auth/callback") || path.startsWith("/auth/reset"))) return;
+
+      const qs = window.location.search || "";
+      const hash = window.location.hash || "";
+
+      const deepLink =
+        path.startsWith("/auth/reset")
+          ? "harborhub://auth/reset" + qs + hash
+          : "harborhub://auth/callback" + qs + hash;
+
+      // Prøv auto-open først
+      window.location.replace(deepLink);
+
+      // Efter kort tid: vis klikbart link (browser blokerer ofte auto-open)
+      setTimeout(() => {
+        const wrap = document.createElement("div");
+        wrap.style.padding = "24px";
+        wrap.style.fontFamily = "Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif";
+        wrap.innerHTML = `
+          <h2 style="margin:0 0 8px 0;">Åbn HarborHub</h2>
+          <p style="margin:0 0 16px 0;">Hvis appen ikke åbner automatisk, så tryk her:</p>
+          <p style="margin:0 0 12px 0;">
+            <a href="${deepLink}" style="font-size:18px; font-weight:700;">Åbn HarborHub</a>
+          </p>
+          <p style="opacity:0.7; margin:0;">Du kan lukke denne side bagefter.</p>
+        `;
+
+        document.body.innerHTML = "";
+        document.body.appendChild(wrap);
+      }, 600);
+    })();
   </script>
 
 </body>
