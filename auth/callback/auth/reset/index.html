@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HarborHub – Reset...</title>
+  </head>
+  <body>
+    <p>Åbner appen…</p>
+
+    <script>
+      const qs = window.location.search || "";
+      const hash = window.location.hash || "";
+
+      const deepLink = "harborhub://auth/reset" + qs + hash;
+      window.location.replace(deepLink);
+
+      setTimeout(() => {
+        document.body.innerHTML =
+          "<p>Hvis appen ikke åbner automatisk, så åbn HarborHub manuelt og prøv igen.</p>";
+      }, 1200);
+    </script>
+  </body>
+</html>
