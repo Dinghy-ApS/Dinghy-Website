@@ -5,11 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nulstil adgangskode</title>
     <style>
-      body { font-family: -apple-system, system-ui, Segoe UI, Roboto, sans-serif; padding: 24px; max-width: 520px; margin: 0 auto; }
-      .btn { display: block; padding: 14px 16px; border-radius: 12px; text-align: center; text-decoration: none; font-weight: 800; margin-top: 14px; }
-      .primary { background: #2F6FED; color: white; }
-      .muted { color: #64748B; margin-top: 12px; line-height: 1.45; }
-      code { background: #f1f5f9; padding: 2px 6px; border-radius: 8px; }
+      body {
+        font-family: -apple-system, system-ui, Segoe UI, Roboto, sans-serif;
+        padding: 24px;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+      .btn {
+        display: block;
+        padding: 14px 16px;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+        margin-top: 14px;
+      }
+      .primary {
+        background: #2F6FED;
+        color: white;
+      }
+      .muted {
+        color: #64748B;
+        margin-top: 12px;
+        line-height: 1.45;
+      }
+      code {
+        background: #f1f5f9;
+        padding: 2px 6px;
+        border-radius: 8px;
+      }
     </style>
   </head>
   <body>
@@ -24,20 +48,38 @@
       Du ser ud til at være på en computer. Åbn linket på din telefon for at fuldføre nulstillingen.
     </p>
 
+    <p class="muted" id="debug" style="display:none;">
+      Debug: <code id="dbgUrl"></code>
+    </p>
+
     <script>
-      // Supabase lægger ofte tokens i #hash. Vi videresender både query + hash.
-      const deepLink = `harborhub://auth/reset${location.search}${location.hash}`;
+      (function () {
+        // ✅ Tag hele den URL Supabase sendte brugeren til (inkl. ?query og #hash)
+        const fullUrl = window.location.href;
 
-      const btn = document.getElementById("openBtn");
-      btn.href = deepLink;
+        // ✅ Bridge deep link: send hele URL’en ind til appen som redirect_url
+        // (så mister vi aldrig #access_token, #refresh_token etc.)
+        const deepLink = `harborhub://auth/reset?redirect_url=${encodeURIComponent(fullUrl)}`;
 
-      const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent);
-      if (!isMobile) {
-        document.getElementById("desktopHint").style.display = "block";
-      } else {
-        // Auto-attempt (kan være blokeret uden user gesture i nogle views)
-        setTimeout(() => { window.location.href = deepLink; }, 200);
-      }
+        // Button link
+        const btn = document.getElementById("openBtn");
+        btn.href = deepLink;
+
+        // Desktop hint
+        const isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent);
+        if (!isMobile) {
+          document.getElementById("desktopHint").style.display = "block";
+        } else {
+          // Auto attempt (kan være blokeret uden user gesture i nogle views)
+          setTimeout(() => {
+            window.location.href = deepLink;
+          }, 200);
+        }
+
+        // (optional) debug hvis du vil tjekke hvad der sendes videre
+        // document.getElementById("debug").style.display = "block";
+        // document.getElementById("dbgUrl").textContent = deepLink;
+      })();
     </script>
   </body>
 </html>
