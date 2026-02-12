@@ -166,6 +166,8 @@
           <h4>Juridisk</h4>
           <a href="privacy.html">Privatlivspolitik</a>
           <a href="terms.html">Vilkår og betingelser</a>
+                              <a href="juridisk.html">Juridisk</a>
+
         </div>
       </div>
     </div>
@@ -174,21 +176,7 @@
       <p>© 2026 HarborHub - Alle rettigheder forbeholdes</p>
     </div>
   </footer>
-
-  <!-- Mobile menu -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const btn = document.querySelector(".nav-toggle");
-      const menu = document.getElementById("navMenu");
-      if (!btn || !menu) return;
-
-      btn.addEventListener("click", () => {
-        const isOpen = menu.classList.toggle("open");
-        btn.classList.toggle("open", isOpen);
-        btn.setAttribute("aria-expanded", String(isOpen));
-      });
-    });
-  </script>
+  <script src="mobile-nav.js"></script>
 
 </body>
 </html>

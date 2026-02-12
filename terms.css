@@ -14,17 +14,6 @@ body{
   color:#0f172a;
 }
 
-/* CTA */
-.nav-cta{
-  background: var(--accent-blue);
-  color: #fff !important;
-  padding: 12px 16px !important;
-  border-radius: 999px;
-  box-shadow: 0 10px 22px rgba(0,122,255,0.22);
-}
-
-
-
 /* ===== PAGE CONTENT ===== */
 .wrap{
   max-width:820px;

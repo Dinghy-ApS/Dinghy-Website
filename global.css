@@ -9,11 +9,19 @@
 
 /* reset-ish */
 *{ box-sizing:border-box; }
+html{
+  -webkit-text-size-adjust: 100%;
+}
 body{
   margin:0;
   font-family:'Inter',sans-serif;
   color:var(--primary-blue);
   background:#fcfcfc;
+}
+
+a,
+button{
+  touch-action: manipulation;
 }
 
 /* =========================
@@ -66,8 +74,8 @@ body{
 /* Burger (hidden desktop) */
 .nav-toggle{
   display: none;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border: 1px solid rgba(255,255,255,0.18);
   background: rgba(255,255,255,0.06);
   border-radius: 14px;
@@ -109,6 +117,8 @@ body{
 
 /* Links */
 .nav-menu a{
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: rgba(255,255,255,0.86);
   font-weight: 700;
@@ -116,6 +126,7 @@ body{
   letter-spacing: 0.02em;
   text-transform: uppercase;
   padding: 10px 10px;
+  min-height: 44px;
   border-radius: 12px;
   transition: background .2s, color .2s, transform .2s;
 }
@@ -178,6 +189,9 @@ body{
 
   .nav-menu a{
     text-align: left;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     padding: 12px 12px;
     border-radius: 14px;
   }
@@ -235,6 +249,7 @@ footer{
 
 .footer-column a{
   display:block;
+  min-height: 44px;
   text-decoration:none;
   color:#64748b;
   margin-bottom:12px;

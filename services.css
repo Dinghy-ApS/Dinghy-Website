@@ -176,19 +176,6 @@ body{
   margin-top:26px;
 }
 
-/* FOOTER (kun hvis du IKKE har fælles footer-css i style.css) */
-footer{
-  background:#fff;
-  border-top:1px solid rgba(10,37,64,.08);
-}
-
-.footer-bottom{
-  text-align:center;
-  padding:26px 5%;
-  color:#7b91a8;
-  font-size:.9rem;
-}
-
 /* RESPONSIVE */
 @media (max-width:980px){
   .grid{grid-template-columns:repeat(2,1fr)}
