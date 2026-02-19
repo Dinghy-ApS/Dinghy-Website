@@ -48,27 +48,53 @@ button{
 
 /* Brand (logo + tekst) */
 .brand{
-  font-size: 1.65rem;
-  font-weight: 800;
-  color: #fff;
+  font-size: 2.05rem;
+  font-weight: 900;
+  color: #6fc2ff;
   text-decoration: none;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.8px;
   line-height: 1;
   white-space: nowrap;
 
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
+  padding: 4px 0;
+  transition: color .2s, transform .2s;
 }
 
 .brand-logo{
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  display: block;
-  border-radius: 20px;
-  padding: 0px;
-  margin-right: 20px;
+  display: none;
+}
+
+.brand span{
+  display: inline;
+  position: relative;
+  color: inherit;
+}
+
+.brand span::after{
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: -8px;
+  height: 3px;
+  border-radius: 999px;
+  background: #2f9fff;
+  opacity: 0.85;
+  transform: scaleX(0.35);
+  transform-origin: left center;
+  transition: transform .2s;
+}
+
+.brand:hover{
+  transform: translateY(-1px);
+  color: #94d7ff;
+}
+
+.brand:hover span::after{
+  transform: scaleX(0.7);
 }
 
 /* Burger (hidden desktop) */
@@ -157,6 +183,12 @@ button{
 @media (max-width: 860px){
   .nav-inner{
     flex-wrap: wrap;
+  }
+
+  .brand{
+    font-size: 1.7rem;
+    letter-spacing: -0.55px;
+    gap: 0;
   }
 
   .nav-toggle{
