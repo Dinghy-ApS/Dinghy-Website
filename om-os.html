@@ -1,198 +1,209 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="logo.png">
-  <title>Om os - Dinghy</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Læs om teamet bag Dinghy, missionen og historien bag platformen."
+    />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Om os | Dinghy</title>
 
-  <link rel="stylesheet" href="global.css" />
-  <link rel="stylesheet" href="om-os.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-</head>
-<body>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="om-os.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="brand" aria-label="Dinghy">
+          <span>Dinghy</span>
+        </a>
 
- <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span>Dinghy</span>
-    </a>
+        <button
+          class="nav-toggle"
+          aria-label="Åbn menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-    <button class="nav-toggle" aria-label="Åbn menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span><span></span>
-    </button>
+        <div class="nav-menu" id="navMenu">
+          <div class="nav-left">
+            <a href="ideen.html">Ideen</a>
+            <a href="services.html">Services</a>
+          </div>
 
-    <div class="nav-menu" id="navMenu">
-      <div class="nav-left">
-        <a href="ideen.html" class="active">Ideen</a>
-        <a href="services.html">Services</a>
-      </div>
-
-      <div class="nav-right">
-        <a href="om-os.html">Om os</a>
-        <a href="kontakt.html" class="nav-cta">Kontakt os →</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-  <!-- HERO -->
-  <header class="about-hero">
-    <div class="about-hero-inner">
-      <p class="kicker">VORES HISTORIE</p>
-      <h1>Om Dinghy</h1>
-      <p class="lead">
-        Vores mission er at gøre bådservice nemmere: mindre tid på koordinering og telefonkæder - mere tid på vandet.
-      </p>
-
-      <div class="hero-cards">
-        <div class="hero-card">
-          <h3>Vores mission</h3>
-          <p>
-            Vi samler værfter, mekanikere og serviceydelser ét sted, så bådejere kan oprette en opgave,
-            få tilbud og booke digitalt - med gennemsigtighed og tryghed.
-          </p>
-        </div>
-
-        <div class="hero-card">
-          <h3>Vores tilgang</h3>
-          <p>
-            Vi bygger en enkel platform med standardiserede tilbud, tydelige ratings og overblik over tilgængelighed,
-            så beslutninger kan tages hurtigt - også i højsæsonen.
-          </p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="about-content">
-
-    <!-- FOUNDER / QUOTE -->
-    <section class="founder">
-      <div class="founder-inner">
-
-        <!-- LOGO-IMAGE -->
-        <div class="founder-media">
-          <img class="founder-photo" src="logo.png" alt="Dinghy logo" />
-        </div>
-
-        <div class="founder-text">
-          <p class="kicker">TEAMET</p>
-          <h2>Vi bygger Dinghy</h2>
-
-          <blockquote>
-            “Bådservice skal være enkelt, transparent og trygt - så bådejere kan bruge tiden på det, der betyder noget.”
-          </blockquote>
-
-          <p class="muted">
-            Dinghy er udviklet som en del af et innovationsprojekt, hvor vi undersøger bådbranchen og
-            bygger en platform, der reducerer friktion mellem bådejere og værfter.
-          </p>
-
-          <div class="founder-cta">
-            <a class="btn-main" href="services.html">Se services →</a>
-            <a class="btn-ghost" href="kontakt.html">Kontakt os →</a>
+          <div class="nav-right">
+            <a href="om-os.html" aria-current="page">Om os</a>
+            <a href="kontakt.html" class="nav-cta">Kontakt os →</a>
           </div>
         </div>
-
       </div>
-    </section>
+    </nav>
 
-    <!-- TIMELINE / STORY -->
-    <section class="story">
-      <div class="story-inner">
-        <p class="kicker">VORES HISTORIE</p>
-        <h2>Sådan startede det</h2>
-
-        <div class="timeline">
-          <article class="timeline-card">
-            <h3>Problemet</h3>
-            <p>
-              Bådejere bruger ofte lang tid på at finde den rigtige hjælp, sammenligne priser og få en tid.
-              Samtidig håndterer mange værfter henvendelser manuelt via telefon og e-mail.
-            </p>
-          </article>
-
-          <article class="timeline-card">
-            <h3>Visionen</h3>
-            <p>
-              Hvad nu hvis én platform kunne samle opgaveopslag, tilbud, booking og betaling -
-              så bådejere får overblik, og værfter kan udnytte deres kapacitet bedre?
-            </p>
-          </article>
-
-          <article class="timeline-card">
-            <h3>Resultatet</h3>
-            <p>
-              Dinghy gør processen mere struktureret: opret opgave, modtag tilbud, vælg, book og betal -
-              med fokus på gennemsigtighed, tillid og enkelhed.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="final-cta">
-      <div class="final-cta-inner">
-        <h2>Klar til at gøre bådservice enklere?</h2>
-        <p class="muted">
-          Kom i gang på få minutter. Beskriv opgaven og få tilbud fra relevante værfter og mekanikere.
+    <header class="about-hero">
+      <div class="about-hero-inner">
+        <p class="kicker">Vores historie</p>
+        <h1>Om Dinghy</h1>
+        <p class="lead">
+          Vores mission er at gøre bådservice nemmere: mindre tid på
+          koordinering og telefonkæder, mere tid på vandet.
         </p>
 
-        <div class="final-buttons">
-          <a class="btn-main" href="kontakt.html">Kontakt os →</a>
-          <a class="btn-ghost" href="services.html">Se services →</a>
-        </div>
+        <div class="hero-cards">
+          <div class="hero-card">
+            <h3>Vores mission</h3>
+            <p>
+              Vi samler værfter, mekanikere og serviceydelser ét sted, så
+              bådejere kan oprette en opgave, få tilbud og booke digitalt med
+              gennemsigtighed og tryghed.
+            </p>
+          </div>
 
-        <ul class="cta-bullets">
-          <li>Hurtigt overblik</li>
-          <li>Gennemsigtige tilbud</li>
-          <li>Ratings & tryghed</li>
-          <li>Digital booking</li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <a href="index.html" class="logo">Dinghy</a>
-        <p>Gør havet lidt lettere for bådejere og værfter.</p>
-      </div>
-
-      <div class="footer-links">
-        <div class="footer-column">
-          <h4>Platform</h4>
-          <a href="ideen.html">Ideen</a>
-          <a href="services.html">Services</a>
-        </div>
-
-        <div class="footer-column">
-          <h4>Support</h4>
-          <a href="om-os.html">Om os</a>
-          <a href="kontakt.html">Kontakt os</a>
-          <a href="faq.html">FAQ</a>
-        </div>
-
-        <div class="footer-column">
-          <h4>Juridisk</h4>
-          <a href="privacy.html">Privatlivspolitik</a>
-          <a href="terms.html">Vilkår og betingelser</a>
-                    <a href="juridisk.html">Juridisk</a>
-
+          <div class="hero-card">
+            <h3>Vores tilgang</h3>
+            <p>
+              Vi bygger en enkel platform med standardiserede tilbud, tydelige
+              ratings og overblik over tilgængelighed, så beslutninger kan tages
+              hurtigt, også i højsæsonen.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="footer-bottom">
-      <p>© 2026 Dinghy - Alle rettigheder forbeholdes</p>
-    </div>
-  </footer>
-  <script src="mobile-nav.js"></script>
-</body>
+    <main class="about-content">
+      <section class="founder">
+        <div class="founder-inner">
+          <div class="founder-media">
+            <img class="founder-photo" src="logo.png" alt="Dinghy logo" />
+          </div>
+
+          <div class="founder-text">
+            <p class="kicker">Teamet</p>
+            <h2>Vi bygger Dinghy</h2>
+
+            <blockquote>
+              "Bådservice skal være enkelt, transparent og trygt, så bådejere
+              kan bruge tiden på det, der betyder noget."
+            </blockquote>
+
+            <p class="muted">
+              Dinghy er udviklet som en del af et innovationsprojekt, hvor vi
+              undersøger bådbranchen og bygger en platform, der reducerer
+              friktion mellem bådejere og værfter.
+            </p>
+
+            <div class="founder-cta">
+              <a class="btn-main" href="services.html">Se services →</a>
+              <a class="btn-ghost" href="kontakt.html">Kontakt os →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="story-inner">
+          <p class="kicker">Vores historie</p>
+          <h2>Sådan startede det</h2>
+
+          <div class="timeline">
+            <article class="timeline-card">
+              <h3>Problemet</h3>
+              <p>
+                Bådejere bruger ofte lang tid på at finde den rigtige hjælp,
+                sammenligne priser og få en tid. Samtidig håndterer mange
+                værfter henvendelser manuelt via telefon og e-mail.
+              </p>
+            </article>
+
+            <article class="timeline-card">
+              <h3>Visionen</h3>
+              <p>
+                Hvad nu hvis én platform kunne samle opgaveopslag, tilbud,
+                booking og betaling, så bådejere får overblik, og værfter kan
+                udnytte deres kapacitet bedre?
+              </p>
+            </article>
+
+            <article class="timeline-card">
+              <h3>Resultatet</h3>
+              <p>
+                Dinghy gør processen mere struktureret: opret opgave, modtag
+                tilbud, vælg, book og betal med fokus på gennemsigtighed, tillid
+                og enkelhed.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="final-cta-inner">
+          <h2>Klar til at gøre bådservice enklere?</h2>
+          <p class="muted">
+            Kom i gang på få minutter. Beskriv opgaven og få tilbud fra
+            relevante værfter og mekanikere.
+          </p>
+
+          <div class="final-buttons">
+            <a class="btn-main" href="kontakt.html">Kontakt os →</a>
+            <a class="btn-ghost" href="services.html">Se services →</a>
+          </div>
+
+          <ul class="cta-bullets">
+            <li>Hurtigt overblik</li>
+            <li>Gennemsigtige tilbud</li>
+            <li>Ratings & tryghed</li>
+            <li>Digital booking</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Dinghy</a>
+          <p>Gør havet lidt lettere for bådejere og værfter.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="ideen.html">Ideen</a>
+            <a href="services.html">Services</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Support</h4>
+            <a href="om-os.html">Om os</a>
+            <a href="kontakt.html">Kontakt os</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Juridisk</h4>
+            <a href="privacy.html">Privatlivspolitik</a>
+            <a href="terms.html">Vilkår og betingelser</a>
+            <a href="juridisk.html">Juridisk</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Dinghy - Alle rettigheder forbeholdes</p>
+      </div>
+    </footer>
+
+    <script src="mobile-nav.js" defer></script>
+  </body>
 </html>

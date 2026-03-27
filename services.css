@@ -1,189 +1,187 @@
-/* services.css — blå/professionelt tema der matcher forsiden (uden navbar override) */
-
-:root{
-  --primary-blue:#0a2540;
-  --accent-blue:#007aff;
-  --bg:#f6f9ff;
-  --card:#ffffff;
-  --muted:#35506a;
-  --border:#cfe0ff;
+:root {
+  --page-bg: #f6f9ff;
+  --card-bg: #ffffff;
+  --muted-text: #35506a;
+  --card-border: rgba(0, 122, 255, 0.18);
 }
 
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:'Inter',sans-serif;
-  color:var(--primary-blue);
-  background:var(--bg);
+body {
+  background: var(--page-bg);
 }
 
-/* HERO */
-.page-hero{
-  padding:72px 5% 56px;
+.page-hero {
+  padding: 72px 5% 56px;
   background:
-    radial-gradient(900px 420px at 18% 20%, rgba(0,122,255,.16), transparent 60%),
-    radial-gradient(700px 380px at 85% 30%, rgba(10,37,64,.10), transparent 55%),
+    radial-gradient(900px 420px at 18% 20%, rgba(0, 122, 255, 0.16), transparent 60%),
+    radial-gradient(700px 380px at 85% 30%, rgba(10, 37, 64, 0.1), transparent 55%),
     #eef4ff;
-  border-bottom:1px solid #dbe7ff;
+  border-bottom: 1px solid #dbe7ff;
 }
 
-.page-hero-inner{
-  max-width:1100px;
-  margin:0 auto;
-  text-align:center;
+.page-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.page-hero h1{
-  margin:0 0 12px;
-  font-size:2.8rem;
-  letter-spacing:-1.2px;
+.page-hero h1 {
+  margin: 0 0 12px;
+  font-size: 2.8rem;
+  letter-spacing: -1.2px;
 }
 
-.page-hero p{
-  margin:0 auto 26px;
-  max-width:820px;
-  color:var(--muted);
-  font-size:1.08rem;
-  line-height:1.7;
+.page-hero p {
+  max-width: 820px;
+  margin: 0 auto 26px;
+  color: var(--muted-text);
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
-/* KNAPPER */
-.btn-main{
-  background:var(--accent-blue);
-  color:#fff;
-  padding:16px 34px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:800;
-  display:inline-block;
-  transition:transform .2s, background .2s, box-shadow .2s;
-  box-shadow:0 12px 26px rgba(0,122,255,.22);
+.btn-main {
+  display: inline-block;
+  padding: 16px 34px;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  background: var(--accent-blue);
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(0, 122, 255, 0.22);
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
 }
 
-.btn-main:hover{
-  transform:scale(1.05);
-  background:#0062cc;
+.btn-main:hover {
+  background: #0062cc;
+  transform: scale(1.05);
 }
 
-/* CONTENT */
-.page-content{
-  padding:60px 5% 90px;
+.page-content {
+  padding: 60px 5% 90px;
 }
 
 .services-grid,
-.mini-flow{
-  max-width:1100px;
-  margin:0 auto;
+.mini-flow {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.services-grid{margin-bottom:64px}
+.services-grid {
+  margin-bottom: 64px;
+}
 
 .services-grid h2,
-.mini-flow h2{
-  margin:0 0 18px;
-  font-size:1.65rem;
-  letter-spacing:-.4px;
+.mini-flow h2 {
+  margin: 0 0 18px;
+  font-size: 1.65rem;
+  letter-spacing: -0.4px;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-/* CARDS */
-.card{
-  background:var(--card);
-  border:1px solid rgba(0,122,255,.18);
-  border-radius:16px;
-  padding:22px 20px;
-  box-shadow:0 12px 28px rgba(10,37,64,.06);
-  transition:transform .18s, box-shadow .18s, border-color .18s;
+.card {
+  padding: 22px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(10, 37, 64, 0.06);
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(0,122,255,.35);
-  box-shadow:0 18px 38px rgba(10,37,64,.10);
+.card:hover {
+  border-color: rgba(0, 122, 255, 0.35);
+  box-shadow: 0 18px 38px rgba(10, 37, 64, 0.1);
+  transform: translateY(-4px);
 }
 
-.card h3{
-  margin:0 0 8px;
-  font-size:1.12rem;
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 1.12rem;
 }
 
-.card p{
-  margin:0 0 10px;
-  color:var(--muted);
-  line-height:1.55;
+.card p {
+  margin: 0 0 10px;
+  color: var(--muted-text);
+  line-height: 1.55;
 }
 
-.card-meta{
-  margin:0;
-  color:#57708a;
-  font-size:.92rem;
-  padding-top:10px;
-  border-top:1px dashed rgba(0,122,255,.22);
+.card-meta {
+  margin: 0;
+  padding-top: 10px;
+  color: #57708a;
+  font-size: 0.92rem;
+  border-top: 1px dashed rgba(0, 122, 255, 0.22);
 }
 
-/* MINI FLOW */
-.mini-flow{
-  text-align:center;
+.mini-flow {
+  text-align: center;
 }
 
-.mini-flow-boxes{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:10px;
+.mini-flow-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 10px;
 }
 
-.mini-box{
-  background:rgba(255,255,255,.92);
-  border:1px solid rgba(0,122,255,.18);
-  border-radius:16px;
-  padding:20px 18px;
-  box-shadow:0 12px 28px rgba(10,37,64,.06);
-  position:relative;
+.mini-box {
+  position: relative;
+  padding: 20px 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(10, 37, 64, 0.06);
 }
 
-/* små blå prikker øverst som “professionel UI”-detalje */
-.mini-box::before{
-  content:"";
-  position:absolute;
-  top:14px;
-  left:14px;
-  width:10px;
-  height:10px;
-  border-radius:999px;
-  background:rgba(0,122,255,.35);
+.mini-box::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 122, 255, 0.35);
+  border-radius: 999px;
 }
 
-.mini-box h3{
-  margin:0 0 6px;
-  font-size:1.05rem;
+.mini-box h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
 }
 
-.mini-box p{
-  margin:0;
-  color:var(--muted);
-  line-height:1.55;
+.mini-box p {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.55;
 }
 
-.mini-flow-cta{
-  margin-top:26px;
+.mini-flow-cta {
+  margin-top: 26px;
 }
 
-/* RESPONSIVE */
-@media (max-width:980px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .mini-flow-boxes{grid-template-columns:1fr}
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mini-flow-boxes {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (max-width:560px){
-  .grid{grid-template-columns:1fr}
-  .page-hero h1{font-size:2.2rem}
-  .page-hero p{font-size:1.02rem}
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .page-hero p {
+    font-size: 1.02rem;
+  }
 }

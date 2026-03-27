@@ -1,107 +1,124 @@
-<!-- kontakt.html (komplet) -->
 <!DOCTYPE html>
 <html lang="da">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="logo.png">
-  <title>Kontakt os - Dinghy</title>
-  <link rel="stylesheet" href="global.css" />
-  <link rel="stylesheet" href="kontakt.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kontakt Dinghy for support, spørgsmål eller samarbejde."
+    />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Kontakt os | Dinghy</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
-</head>
-<body>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="kontakt.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="brand" aria-label="Dinghy">
+          <span>Dinghy</span>
+        </a>
 
+        <button
+          class="nav-toggle"
+          aria-label="Åbn menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span>Dinghy</span>
-    </a>
+        <div class="nav-menu" id="navMenu">
+          <div class="nav-left">
+            <a href="ideen.html">Ideen</a>
+            <a href="services.html">Services</a>
+          </div>
 
-    <button class="nav-toggle" aria-label="Åbn menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span><span></span>
-    </button>
+          <div class="nav-right">
+            <a href="om-os.html">Om os</a>
+            <a href="kontakt.html" class="nav-cta" aria-current="page">
+              Kontakt os →
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <div class="nav-menu" id="navMenu">
-      <div class="nav-left">
-        <a href="ideen.html" class="active">Ideen</a>
-        <a href="services.html">Services</a>
+    <header class="contact-hero">
+      <div class="contact-hero-inner">
+        <h1>Kontakt os</h1>
+      </div>
+    </header>
+
+    <main class="contact-content">
+      <section class="contact-legal">
+        <h2>Virksomhedsoplysninger</h2>
+
+        <div class="contact-block">
+          <p><strong>Dinghy ApS</strong></p>
+          <p>Grønnegade 31</p>
+          <p>1107 København</p>
+          <p>Denmark</p>
+
+          <p class="spacer"></p>
+
+          <p>Business registration number (CVR): <strong>XXXXXXXX</strong></p>
+        </div>
+
+        <h2>Kontakt</h2>
+
+        <div class="contact-block">
+          <p>
+            Dinghy support:
+            <a href="mailto:support@dinghy.dk">support@dinghy.dk</a>
+          </p>
+          <p>Phone: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Dinghy</a>
+          <p>Gør havet lidt lettere for bådejere og værfter.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="ideen.html">Ideen</a>
+            <a href="services.html">Services</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Support</h4>
+            <a href="om-os.html">Om os</a>
+            <a href="kontakt.html">Kontakt os</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Juridisk</h4>
+            <a href="privacy.html">Privatlivspolitik</a>
+            <a href="terms.html">Vilkår og betingelser</a>
+            <a href="juridisk.html">Juridisk</a>
+          </div>
+        </div>
       </div>
 
-      <div class="nav-right">
-        <a href="om-os.html">Om os</a>
-        <a href="kontakt.html" class="nav-cta">Kontakt os →</a>
+      <div class="footer-bottom">
+        <p>© 2026 Dinghy - Alle rettigheder forbeholdes</p>
       </div>
-    </div>
-  </div>
-</nav>
+    </footer>
 
-  <header class="contact-hero">
-    <div class="contact-hero-inner">
-      <h1>Kontakt os</h1>
-    </div>
-  </header>
-
-  <main class="contact-content">
-    <section class="contact-legal">
-      <h2></h2>
-
-      <div class="contact-block">
-        <p><strong>Dinghy ApS</strong></p>
-        <p>Grønnegade 31</p>
-        <p>1107 København</p>
-        <p>Denmark</p>
-
-        <p class="spacer"></p>
-
-        <p>Business registration number (CVR): <strong>XXXXXXXX</strong></p>
-      </div>
-
-      <h2></h2>
-
-      <div class="contact-block">
-        <p>Dinghy support: <a href="mailto:support@dinghy.dk">support@dinghy.dk</a></p>
-        <p>Phone: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
-      </div>
-    </section>
-  </main>
-
- 
-<footer>
-  <div class="footer-content">
-    <div class="footer-brand">
-      <a href="index.html" class="logo">Dinghy</a>
-      <p>Gør havet lidt lettere for bådejere og værfter.</p>
-    </div>
-
-    <div class="footer-links">
-      <div class="footer-column">
-        <h4>Platform</h4>
-        <a href="ideen.html">Ideen</a>
-        <a href="services.html">Services</a>
-      </div>
-      <div class="footer-column">
-        <h4>Support</h4>
-        <a href="om-os.html">Om os</a>
-        <a href="kontakt.html">Kontakt os</a>
-          <a href="faq.html">FAQ</a>
-      </div>
-      <div class="footer-column">
-        <h4>Juridisk</h4>
-        <a href="privacy.html">Privatlivspolitik</a>
-        <a href="terms.html">Vilkår og betingelser</a>
-        <a href="juridisk.html">Juridisk</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 Dinghy - Alle rettigheder forbeholdes</p>
-  </div>
-</footer>
-<script src="mobile-nav.js"></script>
-</body>
+    <script src="mobile-nav.js" defer></script>
+  </body>
 </html>
